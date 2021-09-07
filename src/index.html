@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search images</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" />
+    <link href="../node_modules/@pnotify/core/dist/Material.css" rel="stylesheet" type="text/css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1>
+        Thousands of pictures wait for you!
+        <!-- <br />
+        Just search what you want -->
+      </h1>
+      <form class="search-form" id="search-form">
+        <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+        <button type="submit"><span class="material-icons"> search </span></button>
+      </form>
+    </header>
+    <main>
+      <div class="container">
+        <ul class="gallery grid"></ul>
+      </div>
+      <div class="lightbox js-lightbox">
+        <div class="lightbox__overlay"></div>
+
+        <div class="lightbox__content">
+          <img class="lightbox__image" src="" alt="" />
+        </div>
+
+        <button type="button" class="lightbox__button" data-action="close-lightbox">
+          <span class="material-icons"> close </span>
+        </button>
+        <button type="button" class="turn-left">
+          <span class="material-icons"> arrow_back_ios </span>
+        </button>
+        <button type="button" class="turn-right">
+          <span class="material-icons"> arrow_forward_ios </span>
+        </button>
+        <p class="slider-paginage-js"></p>
+      </div>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

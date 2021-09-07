@@ -1,0 +1,15 @@
+export default {
+  body: document.querySelector("body"),
+  form: document.querySelector("#search-form"),
+  input: document.querySelector("input"),
+  buttonSearch: document.querySelector("button"),
+  gallery: document.querySelector("ul"),
+  more: document.querySelector('[data-name="load-more"]'),
+  modalEl: document.querySelector(".js-lightbox"),
+  modalImgEl: document.querySelector(".lightbox__image"),
+  overlayEl: document.querySelector(".lightbox__overlay"),
+  modalCloseBtn: document.querySelector('button[data-action="close-lightbox"]'),
+  paginate: document.querySelector(".slider-paginage-js"),
+  turnLeft: document.querySelector(".turn-left"),
+  turnRight: document.querySelector(".turn-right"),
+};

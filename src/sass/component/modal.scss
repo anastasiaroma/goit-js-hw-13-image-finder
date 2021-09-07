@@ -1,0 +1,116 @@
+//lightbox
+
+.lightbox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox__content {
+  transform: scale(0.95);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox.is-open .lightbox__content {
+  transform: scale(1);
+}
+
+.lightbox__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 90vh;
+  max-width: 90vw;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 50px 32px rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+}
+
+.lightbox__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color var(--animation-duration) var(--timing-function);
+  outline: none;
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+.turn-left,
+.turn-right {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  outline: none;
+  //   padding: 10px;
+}
+.turn-left:hover,
+.turn-right:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.turn-left {
+  left: 20px;
+}
+.turn-right {
+  right: 20px;
+}
+.turn-left .material-icons,
+.turn-right .material-icons {
+  font-size: 40px;
+}
+.lightbox__button:hover,
+.lightbox__button:focus {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slider-paginage-js {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  color: #fff;
+  margin-bottom: 10px;
+}
