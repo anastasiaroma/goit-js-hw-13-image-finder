@@ -5,7 +5,7 @@ export default class SearchImages {
   constructor() {
     this.searchQueary = "";
     this.pageNumber = 1;
-    this.KEY = "23036089-03f6791326ef951aa675b45d4";
+    this.KEY = "24237736-ec4fd4f15412e68e53af9bc23";
   }
 
   axiosImage() {
